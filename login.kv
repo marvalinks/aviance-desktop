@@ -9,16 +9,19 @@
 
         Image:
             source: './images/aviance.png'
+            size_hint: [.8, .8]
+            pos_hint: {'center_x': .5}
 
         BoxLayout:
             orientation: 'vertical'
             background_color: 1,1,1,1
+            size_hint: [.5, .5]
+            pos_hint: {'center_x': .5}
 
             Label:
                 text: 'Login'
-                font_size: 18
+                font_size: 30
                 halign: 'left'
-                text_size: root.width-20, 20
                 color: 0, 0, 0, 1
 
             TextInput:
@@ -28,11 +31,13 @@
 
         BoxLayout:
             orientation: 'vertical'
+            size_hint: [.5, .5]
+            pos_hint: {'center_x': .5}
+
             Label:
                 text: 'Password'
                 halign: 'left'
-                font_size: 18
-                text_size: root.width-20, 20
+                font_size: 30
                 color: 0, 0, 0, 1
 
             TextInput:
@@ -44,5 +49,7 @@
         Button:
             text: 'Login system'
             font_size: 24
+            size_hint: [.5, .5]
+            pos_hint: {'center_x': .5}
 
             on_press: root.do_login(login.text, password.text)
