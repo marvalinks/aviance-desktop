@@ -38,6 +38,7 @@ class Connected(Screen):
         carrier_code = self.ids.carrier_code.text
         transport_number = self.ids.transport_number.text
         weight = self.ids.weight.text
+        print(self.store.get('user')['userid'])
         dataReq = {
             'uld_number': uld_number,
             'station_code': station_code,
@@ -45,7 +46,7 @@ class Connected(Screen):
             'carrier_code': carrier_code,
             'transport_number': transport_number,
             'weight': weight,
-            'userid': self.store.get('user')['userid']
+            # 'userid': self.store.get('user')['userid']
         }
         for key in dataReq:
             if dataReq[key] and dataReq[key].strip():
