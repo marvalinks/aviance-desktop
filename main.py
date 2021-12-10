@@ -68,7 +68,7 @@ class Login(Screen):
         layout = GridLayout(cols = 1, padding = 5)
   
         popupLabel = Label(text = message)
-        closeButton = Button(text = "Close")
+        closeButton = Button(text = "Close", size_hint=(None, None), width=100, height=40)
   
         layout.add_widget(popupLabel)
         layout.add_widget(closeButton)       
@@ -76,7 +76,7 @@ class Login(Screen):
         # Instantiate the modal popup and display
         popup = Popup(title ='Alert',
                       content = layout,
-                      size_hint =(None, None), size =(400, 400))  
+                      size_hint =(None, None), size =(400, 200))  
         popup.open()   
   
         # Attach close button press with popup.dismiss action

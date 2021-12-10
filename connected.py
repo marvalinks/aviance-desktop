@@ -38,7 +38,7 @@ class Connected(Screen):
         carrier_code = self.ids.carrier_code.text
         transport_number = self.ids.transport_number.text
         weight = self.ids.weight.text
-        print(self.store.get('user')['userid'])
+        # print(self.store.get('user')['userid'])
         dataReq = {
             'uld_number': uld_number,
             'station_code': station_code,
@@ -46,7 +46,7 @@ class Connected(Screen):
             'carrier_code': carrier_code,
             'transport_number': transport_number,
             'weight': weight,
-            # 'userid': self.store.get('user')['userid']
+            'userid': self.store.get('user')['userid']
         }
         for key in dataReq:
             if dataReq[key] and dataReq[key].strip():
@@ -74,7 +74,7 @@ class Connected(Screen):
         layout = GridLayout(cols = 1, padding = 5)
   
         popupLabel = Label(text = message)
-        closeButton = Button(text = "Close")
+        closeButton = Button(text = "Close", size_hint=(None, None), width=100, height=40)
   
         layout.add_widget(popupLabel)
         layout.add_widget(closeButton)       
@@ -82,7 +82,7 @@ class Connected(Screen):
         # Instantiate the modal popup and display
         popup = Popup(title ='Alert',
                       content = layout,
-                      size_hint =(None, None), size =(400, 400))  
+                      size_hint =(None, None), size =(400, 200))  
         popup.open()   
   
         # Attach close button press with popup.dismiss action
