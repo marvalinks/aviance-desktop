@@ -109,3 +109,10 @@ class LoginApp(App):
 
 if __name__ == '__main__':
     LoginApp().run()
+
+
+
+
+# number of pcs
+# rate
+# rate x pcs
