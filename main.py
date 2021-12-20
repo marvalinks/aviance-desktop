@@ -87,6 +87,7 @@ class LoginApp(App):
     password = StringProperty(None)
 
     def build(self):
+        self.title = "Aviance Cargo Weight Capture"
         manager = ScreenManager()
 
         manager.add_widget(Login(name='login'))
